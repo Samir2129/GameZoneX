@@ -97,29 +97,32 @@
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
     }
     .game-box:hover {
       transform: scale(1.05);
     }
     .game-box h3 {
-      background-color: #0288d1;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
+      margin-bottom: 10px;
     }
-    .game-box iframe {
-      width: 100%;
-      height: 60vw;
-      min-height: 300px;
-      border: none;
+    .game-box a {
+      display: inline-block;
+      background: #fff;
+      color: #0288d1;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    #donate {
+    #contact, #donate {
       padding: 20px;
       margin: 20px;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: none;
     }
     #donate p {
       font-size: 1.1rem;
@@ -147,7 +150,7 @@
       <li><a href="tel:+919096096966">Contact</a></li>
       <li><a href="javascript:void(0);" onclick="showDonate()">Donate</a></li>
     </ul>
-    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Light Mode</button>
   </nav>
 
   <section id="home">
@@ -160,38 +163,28 @@
   <section id="games" class="game-container">
     <div class="game-box">
       <h3>Tic Tac Toe</h3>
-      <iframe src="https://samir2129.github.io/tic.tac.toe/" allowfullscreen></iframe>
+      <p>Challenge your friend or the AI in this fun game!</p>
+      <a href="https://samir2129.github.io/tic.tac.toe/" target="_blank">Play Now</a>
     </div>
-    <div class="game-box">
-      <h3>Element Blocks</h3>
-      <iframe src="https://play.famobi.com/element-blocks" allowfullscreen></iframe>
-    </div>
-    <div class="game-box">
-      <h3>Tower Crash 3D</h3>
-      <iframe src="https://play.famobi.com/tower-crash-3d" allowfullscreen></iframe>
-    </div>
-    <!-- Add more games here -->
+    <!-- Add more games below in same format -->
   </section>
 
-  <section id="donate">
+  <section id="donate" style="display:none;">
     <h2>🙏 Your support keeps us going!</h2>
     <p>Every contribution helps us bring more amazing games to you.</p>
     <p><strong>💖 Thank you for your generosity!</strong></p>
     <p>UPI ID: <strong>mendhesamir980@okhdfcbank</strong></p>
-    <p><a href="upi://pay?pa=mendhesamir980@okhdfcbank&pn=GameZoneX&cu=INR">Click here to pay via UPI</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 GameZoneX | <a href="tel:+919096096966">Contact</a> | <a href="javascript:void(0);" onclick="showDonate()">Donate</a></p>
+    <p>&copy; 2025 GameZoneX | <a href="tel:+919096096966">Contact</a> | <a href="#donate" onclick="showDonate()">Donate</a></p>
   </footer>
 
   <script>
     function toggleMode() {
       const body = document.body;
       const btn = document.querySelector(".mode-toggle");
-      const isLight = body.style.backgroundColor === "rgb(241, 241, 241)" || body.style.backgroundColor === "";
-
-      if (isLight) {
+      if (body.style.backgroundColor === "rgb(241, 241, 241)") {
         body.style.backgroundColor = "#121212";
         body.style.color = "#fff";
         btn.textContent = "Switch to Light Mode";
@@ -203,9 +196,8 @@
     }
 
     function showDonate() {
-      const donate = document.getElementById("donate");
-      donate.style.display = "block";
-      donate.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("donate").style.display = "block";
+      document.getElementById("donate").scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
