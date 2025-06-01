@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate to GameZoneX</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      padding: 30px;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      color: #0288d1;
+      margin-bottom: 20px;
+    }
+    .qr {
+      margin: 20px 0;
+    }
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+    }
+    .upi-id {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .note {
+      font-style: italic;
+      color: #888;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #0288d1;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #0277bd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🙏 Support GameZoneX</h1>
+  <p>Every donation helps us build better games for you!</p>
+
+  <div class="qr">
+    <!-- Replace this image URL with your real QR code if you have one -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=mendhesamir980@okhdfcbank&pn=Samir%20Mendhe&cu=INR&tn=Support%20from%20a%20GameZoneX&am=10&url=https://gamezonex.com&mode=02" alt="Donate QR Code">
+  </div>
+
+  <div class="upi-id">
+    UPI ID: <strong>mendhesamir980@okhdfcbank</strong>
+  </div>
+  <p class="note">Transaction note: <em>Support from a GameZoneX</em></p>
+
+  <a class="btn" href="upi://pay?pa=mendhesamir980@okhdfcbank&pn=Samir%20Mendhe&tn=Support%20from%20a%20GameZoneX&am=10&cu=INR" target="_blank">Donate Now</a>
+
+</body>
+</html>
