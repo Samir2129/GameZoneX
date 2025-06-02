@@ -19,6 +19,12 @@
       color: #333;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #fff;
+    }
+
     nav {
       background-color: #0288d1;
       padding: 20px 15px;
@@ -32,18 +38,25 @@
       border-radius: 10px;
       flex-wrap: wrap;
     }
+
+    body.dark-mode nav {
+      background-color: #1f1f1f;
+    }
+
     nav .logo {
       font-size: 2rem;
       color: #fff;
       font-weight: 600;
       text-transform: uppercase;
     }
+
     nav ul {
       list-style-type: none;
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
     }
+
     nav ul li a {
       color: #fff;
       font-size: 1rem;
@@ -52,9 +65,11 @@
       border-radius: 20px;
       transition: background-color 0.3s ease;
     }
+
     nav ul li a:hover {
       background-color: #00bcd4;
     }
+
     .mode-toggle {
       margin-top: 10px;
       background-color: #00bcd4;
@@ -67,32 +82,40 @@
       font-weight: 600;
       transition: background 0.3s ease, transform 0.3s ease;
     }
+
     .mode-toggle:hover {
       background-color: #0288d1;
       transform: scale(1.05);
     }
+
     header {
       background-color: #fff;
       padding: 40px 15px;
       text-align: center;
     }
+
+    body.dark-mode header {
+      background-color: #1f1f1f;
+    }
+
     header h1 {
       font-size: 2.5rem;
       color: #0288d1;
     }
+
     header p {
       font-size: 1.1rem;
       color: #666;
       margin-top: 10px;
     }
 
-    /* Game Cards Layout */
     .game-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       padding: 20px;
     }
+
     .game-box {
       background: linear-gradient(45deg, #00bcd4, #0288d1);
       border-radius: 15px;
@@ -103,9 +126,11 @@
       padding: 20px;
       color: #fff;
     }
+
     .game-box:hover {
       transform: scale(1.05);
     }
+
     .game-box img {
       max-width: 100%;
       height: 150px;
@@ -113,14 +138,17 @@
       border-radius: 10px;
       margin-bottom: 15px;
     }
+
     .game-box h3 {
       font-size: 1.3rem;
       margin-bottom: 10px;
     }
+
     .game-box p {
       font-size: 0.95rem;
       margin-bottom: 15px;
     }
+
     .game-box a {
       display: inline-block;
       background: #fff;
@@ -132,19 +160,21 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
+
     .game-box a:hover {
       background-color: #eee;
     }
-    .game-box h3 {
-      background-color: #0288d1;
+
+    body.dark-mode .game-box a {
+      background-color: #444;
       color: #fff;
-      font-size: 1.4rem;
-      padding: 20px;
-      text-align: center;
-      letter-spacing: 1px;
-      font-weight: 600;
     }
- .game-box iframe {
+
+    body.dark-mode .game-box a:hover {
+      background-color: #666;
+    }
+
+    .game-box iframe {
       width: 100%;
       height: 60vw;
       min-height: 320px;
@@ -152,13 +182,18 @@
       border-top: 5px solid #00bcd4;
     }
 
-
     footer {
       background-color: #fff;
       text-align: center;
       padding: 20px;
       border-top: 1px solid #ccc;
     }
+
+    body.dark-mode footer {
+      background-color: #1f1f1f;
+      color: #fff;
+    }
+
     footer a {
       color: #0288d1;
       text-decoration: none;
@@ -172,15 +207,15 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#games">Games</a></li>
-     <li><a href="contact.html" target="_blank">Contact</a></li>
-      <li><a href="donate.html" target="_blank">Donate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html">Donate</a></li>
     </ul>
-    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
+  
   </nav>
 
   <section id="home">
     <header>
-      <h1>🎮 GameZoneX</h1>
+      <h1>GameZoneX</h1>
       <p>Explore a world of online games and play with your friends!</p>
     </header>
   </section>
@@ -193,65 +228,40 @@
       <a href="https://samir2129.github.io/tic-tac-toe/" target="_blank">Play Now</a>
     </div>
 
-<div class="game-box">
-  <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/BubbleTower3dTeaser.jpg?v=0.2-335e9d61" style="width: 100%; border-radius: 10px 10px 0 0;" alt="Sudoku">
-  <h3>Bubble Tower 3D</h3>
-  <p>Use logic to fill in the grid with numbers without repeating any in rows, columns, or blocks.</p>
-  <a href="https://play.famobi.com/bubble-tower-3d" target="_blank">Play Now</a>
-</div>
-
-<div class="game-box">
-  <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/GiantRushTeaser.jpg?v=0.2-335e9d61" style="width: 100%; border-radius: 10px 10px 0 0;" alt="Sudoku">
-  <h3>Bubble Tower 3D</h3>
-  <p>Run, merge, and battle giants in Giant Rush – the ultimate action-packed adventure.</p>
-  <a href="https://play.famobi.com/giant-rush" target="_blank">Play Now</a>
-</div>
     <div class="game-box">
-  <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ArcheryWorldTourTeaser.jpg?v=0.2-335e9d61" alt="Sudoku">
-  <h3>Archery World Tour</h3>
-  <p>Grab a bow and put your archery skills to the ultimate test</p>
-  <a href="https://play.famobi.com/archery-world-tour" target="_blank">Play Now</a>
-</div>
-        <div class="game-box">
-  <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/StreetRaceFuryTeaser.jpg?v=0.2-335e9d61" alt="Sudoku">
-  <h3>StreetRace Fury</h3>
-  <p>You love fast cars and squeaking wheels? You want exciting neck-and-neck races and maximum speed?</p>
-  <a href="https://play.famobi.com/streetrace-fury" target="_blank">Play Now</a>
-</div>
-
-    <!-- Duplicate this block for more games -->
-    <!-- Example -->
-    <!--
-    <div class="game-box">
-      <img src="IMAGE_LINK" alt="Game Title">
-      <h3>Game Name</h3>
-      <p>Short description</p>
-      <a href="GAME_LINK" target="_blank">Play Now</a>
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/BubbleTower3dTeaser.jpg?v=0.2-335e9d61" style="width: 100%; border-radius: 10px 10px 0 0;" alt="Bubble Tower 3D">
+      <h3>Bubble Tower 3D</h3>
+      <p>Use logic to fill in the grid with numbers without repeating any in rows, columns, or blocks.</p>
+      <a href="https://play.famobi.com/bubble-tower-3d" target="_blank">Play Now</a>
     </div>
-    -->
+
+    <div class="game-box">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/GiantRushTeaser.jpg?v=0.2-335e9d61" style="width: 100%; border-radius: 10px 10px 0 0;" alt="Giant Rush">
+      <h3>Giant Rush</h3>
+      <p>Run, merge, and battle giants in Giant Rush – the ultimate action-packed adventure.</p>
+      <a href="https://play.famobi.com/giant-rush" target="_blank">Play Now</a>
+    </div>
+
+    <div class="game-box">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ArcheryWorldTourTeaser.jpg?v=0.2-335e9d61" alt="Archery World Tour">
+      <h3>Archery World Tour</h3>
+      <p>Grab a bow and put your archery skills to the ultimate test</p>
+      <a href="https://play.famobi.com/archery-world-tour" target="_blank">Play Now</a>
+    </div>
+
+    <div class="game-box">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/StreetRaceFuryTeaser.jpg?v=0.2-335e9d61" alt="StreetRace Fury">
+      <h3>StreetRace Fury</h3>
+      <p>You love fast cars and squeaking wheels? You want exciting neck-and-neck races and maximum speed?</p>
+      <a href="https://play.famobi.com/streetrace-fury" target="_blank">Play Now</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 GameZoneX | <a href="tel:+919096096966">Contact</a> | <a href="donate.html" target="_blank">Donate</a></p>
+    <p>&copy; 2025 GameZoneX | <a href="contact.html">Contact</a> | <a href="donate.html">Donate</a></p>
   </footer>
 
-  <script>
-    function toggleMode() {
-      const body = document.body;
-      const btn = document.querySelector(".mode-toggle");
-      const isLight = body.style.backgroundColor === "rgb(241, 241, 241)" || !body.style.backgroundColor;
-
-      if (isLight) {
-        body.style.backgroundColor = "#121212";
-        body.style.color = "#fff";
-        btn.textContent = "Switch to Light Mode";
-      } else {
-        body.style.backgroundColor = "#f1f1f1";
-        body.style.color = "#333";
-        btn.textContent = "Switch to Dark Mode";
-      }
-    }
-  </script>
+  
 
 </body>
 </html>
