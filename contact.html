@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - GameZoneX</title>
-  <link href="https://script.google.com/macros/library/d/11w610s7NyIcQ2Wlif5zPfG9pDN2SdXLpU4LAXB2VK9gUCl8BOSp2tdPx/1">
   <style>
     * {
       margin: 0;
@@ -168,10 +167,7 @@
   <header>
     <div class="logo">GameZoneX</div>
     <nav>
-      <a href="google.com">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Blog</a>
+      <a href="">Home</a>
     </nav>
     <button class="contact-btn">Contact</button>
   </header>
@@ -196,41 +192,37 @@
     </div>
   </div>
 
+  <footer>
+    © 2025 GameZoneX. All rights reserved.
+  </footer>
+
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwg30zrTbQVXo70qxRsnO6rBeL3KlqZmj3HF5IOHkylBPEfzrEaUoj2xEOhLo8B1qwl/exec'; // 👈 Replace this with your actual Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwg30zrTbQVXo70qxRsnO6rBeL3KlqZmj3HF5IOHkylBPEfzrEaUoj2xEOhLo8B1qwl/exec';
     const form = document.getElementById('contactForm');
 
     form.addEventListener('submit', e => {
       e.preventDefault();
 
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        subject: form.subject.value,
-        message: form.message.value,
-      };
+      const formData = new FormData(form);
 
       fetch(scriptURL, {
         method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("✅ Message Sent Successfully!");
+          form.reset();
+        } else {
+          alert("❌ Error sending message. Please try again.");
         }
       })
-      .then(res => {
-        alert("✅ Message Sent Successfully!");
-        form.reset();
-      })
-      .catch(err => {
-        console.error("Error!", err.message);
-        alert("❌ Failed to send message");
+      .catch(error => {
+        console.error("Error!", error.message);
+        alert("❌ Failed to send message.");
       });
     });
   </script>
-
-  <footer>
-    © 2025 GameZoneX. All rights reserved.
-  </footer>
 
 </body>
 </html>
