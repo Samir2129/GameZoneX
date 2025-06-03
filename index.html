@@ -7,6 +7,7 @@
   <title>GameZoneX</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    /* (same CSS as before, not changed) */
     * {
       margin: 0;
       padding: 0;
@@ -20,12 +21,10 @@
       color: #333;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
     body.dark-mode {
       background-color: #121212;
       color: #fff;
     }
-
     nav {
       background-color: #0288d1;
       padding: 20px 15px;
@@ -39,25 +38,21 @@
       border-radius: 10px;
       flex-wrap: wrap;
     }
-
     body.dark-mode nav {
       background-color: #1f1f1f;
     }
-
     nav .logo {
       font-size: 2rem;
       color: #fff;
       font-weight: 600;
       text-transform: uppercase;
     }
-
     nav ul {
       list-style-type: none;
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
     }
-
     nav ul li a {
       color: #fff;
       font-size: 1rem;
@@ -66,11 +61,9 @@
       border-radius: 20px;
       transition: background-color 0.3s ease;
     }
-
     nav ul li a:hover {
       background-color: #00bcd4;
     }
-
     .mode-toggle {
       margin-top: 10px;
       background-color: #00bcd4;
@@ -83,40 +76,33 @@
       font-weight: 600;
       transition: background 0.3s ease, transform 0.3s ease;
     }
-
     .mode-toggle:hover {
       background-color: #0288d1;
       transform: scale(1.05);
     }
-
     header {
       background-color: #fff;
       padding: 40px 15px;
       text-align: center;
     }
-
     body.dark-mode header {
       background-color: #1f1f1f;
     }
-
     header h1 {
       font-size: 2.5rem;
       color: #0288d1;
     }
-
     header p {
       font-size: 1.1rem;
       color: #666;
       margin-top: 10px;
     }
-
     .game-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       padding: 20px;
     }
-
     .game-box {
       background: linear-gradient(45deg, #00bcd4, #0288d1);
       border-radius: 15px;
@@ -127,11 +113,9 @@
       padding: 20px;
       color: #fff;
     }
-
     .game-box:hover {
       transform: scale(1.05);
     }
-
     .game-box img {
       max-width: 100%;
       height: 150px;
@@ -139,17 +123,14 @@
       border-radius: 10px;
       margin-bottom: 15px;
     }
-
     .game-box h3 {
       font-size: 1.3rem;
       margin-bottom: 10px;
     }
-
     .game-box p {
       font-size: 0.95rem;
       margin-bottom: 15px;
     }
-
     .game-box a {
       display: inline-block;
       background: #fff;
@@ -161,20 +142,16 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
-
     .game-box a:hover {
       background-color: #eee;
     }
-
     body.dark-mode .game-box a {
       background-color: #444;
       color: #fff;
     }
-
     body.dark-mode .game-box a:hover {
       background-color: #666;
     }
-
     .game-box iframe {
       width: 100%;
       height: 60vw;
@@ -182,19 +159,16 @@
       border: none;
       border-top: 5px solid #00bcd4;
     }
-
     footer {
       background-color: #fff;
       text-align: center;
       padding: 20px;
       border-top: 1px solid #ccc;
     }
-
     body.dark-mode footer {
       background-color: #1f1f1f;
       color: #fff;
     }
-
     footer a {
       color: #0288d1;
       text-decoration: none;
@@ -211,7 +185,6 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="donate.html">Donate</a></li>
     </ul>
-  
   </nav>
 
   <section id="home">
@@ -226,56 +199,55 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Tic_tac_toe.svg" alt="Tic Tac Toe">
       <h3>Tic Tac Toe</h3>
       <p>Challenge your friend or the AI in this fun game!</p>
-      <a href="https://samir2129.github.io/tic-tac-toe/" target="_blank">Play Now</a>
+      <a href="https://samir2129.github.io/tic-tac-toe/">Play Now</a>
     </div>
 
     <div class="game-box">
-      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/BubbleTower3dTeaser.jpg?v=0.2-335e9d61" style="width: 100%; border-radius: 10px 10px 0 0;" alt="Bubble Tower 3D">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/BubbleTower3dTeaser.jpg?v=0.2-335e9d61" alt="Bubble Tower 3D">
       <h3>Bubble Tower 3D</h3>
       <p>Use logic to fill in the grid with numbers without repeating any in rows, columns, or blocks.</p>
-      <a href="https://play.famobi.com/bubble-tower-3d" target="_blank">Play Now</a>
+      <a href="https://play.famobi.com/bubble-tower-3d">Play Now</a>
     </div>
 
     <div class="game-box">
-      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/GiantRushTeaser.jpg?v=0.2-335e9d61" style="width: 100%; border-radius: 10px 10px 0 0;" alt="Giant Rush">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/GiantRushTeaser.jpg?v=0.2-335e9d61" alt="Giant Rush">
       <h3>Giant Rush</h3>
       <p>Run, merge, and battle giants in Giant Rush – the ultimate action-packed adventure.</p>
-      <a href="https://play.famobi.com/giant-rush" target="_blank">Play Now</a>
+      <a href="https://play.famobi.com/giant-rush">Play Now</a>
     </div>
 
     <div class="game-box">
       <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ArcheryWorldTourTeaser.jpg?v=0.2-335e9d61" alt="Archery World Tour">
       <h3>Archery World Tour</h3>
       <p>Grab a bow and put your archery skills to the ultimate test</p>
-      <a href="https://play.famobi.com/archery-world-tour" target="_blank">Play Now</a>
+      <a href="https://play.famobi.com/archery-world-tour">Play Now</a>
     </div>
 
     <div class="game-box">
       <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/StreetRaceFuryTeaser.jpg?v=0.2-335e9d61" alt="StreetRace Fury">
       <h3>StreetRace Fury</h3>
       <p>You love fast cars and squeaking wheels? You want exciting neck-and-neck races and maximum speed?</p>
-      <a href="https://play.famobi.com/streetrace-fury" target="_blank">Play Now</a>
+      <a href="https://play.famobi.com/streetrace-fury">Play Now</a>
     </div>
-     <div class="game-box">
-      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorWaterSort3dTeaser.jpg?v=0.2-335e9d61"alt="Color Water Sort 3D">
+
+    <div class="game-box">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorWaterSort3dTeaser.jpg?v=0.2-335e9d61" alt="Color Water Sort 3D">
       <h3>Color Water Sort 3D</h3>
-      <p>Dive into the colorful challenge of Color Water Sort 3D </p>
-      <a href="https://play.famobi.com/color-water-sort-3d" target="_blank">Play Now</a>
+      <p>Dive into the colorful challenge of Color Water Sort 3D</p>
+      <a href="https://play.famobi.com/color-water-sort-3d">Play Now</a>
     </div>
-       <div class="game-box">
-      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/PipePuzzleTeaser.jpg?v=0.2-335e9d61"alt="Pipe Puzzle">
+
+    <div class="game-box">
+      <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/PipePuzzleTeaser.jpg?v=0.2-335e9d61" alt="Pipe Puzzle">
       <h3>Pipe Puzzle</h3>
-      <p>Dive into the high-pressure world of Pipe Puzzle </p>
-      <a href="https://play.famobi.com/pipe-puzzle" target="_blank">Play Now</a>
+      <p>Dive into the high-pressure world of Pipe Puzzle</p>
+      <a href="https://play.famobi.com/pipe-puzzle">Play Now</a>
     </div>
-    
   </section>
 
   <footer>
     <p>&copy; 2025 GameZoneX | <a href="contact.html">Contact</a> | <a href="donate.html">Donate</a></p>
   </footer>
-
-  
 
 </body>
 </html>
